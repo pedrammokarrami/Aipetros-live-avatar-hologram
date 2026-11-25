@@ -1,0 +1,6 @@
+{
+  "name": "Aether — 3D Holographic Point-Cloud Chat",
+  "description": "An ultra-minimalist 3D holographic cellular point-cloud voice and text chat interface supporting GLB upper-body avatars, real-time Web Audio lip-sync, and bilingual English & Persian (RTL) conversation.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

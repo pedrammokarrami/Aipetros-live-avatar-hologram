@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-latin: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-persian: "Vazirmatn", "Plus Jakarta Sans", Tahoma, sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #030a14;
+    overflow: hidden;
+    font-family: var(--font-latin);
+  }
+}
+
+.font-bilingual-rtl {
+  font-family: var(--font-persian);
+}
+
+.font-bilingual-ltr {
+  font-family: var(--font-latin);
+}
+
+/* Liquid Glass surface crafted with specular rim highlights and deep refraction tint.
+   backdrop-filter is applied only on GPU-accelerated contexts (.gpu-glass) so software WebGL never stalls. */
+.liquid-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 34, 58, 0.72) 0%,
+    rgba(6, 18, 36, 0.84) 55%,
+    rgba(9, 26, 48, 0.78) 100%
+  );
+  border: 1px solid rgba(135, 228, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(215, 248, 255, 0.26),
+    inset 0 -1px 0 rgba(34, 211, 238, 0.08),
+    0 18px 46px rgba(0, 6, 16, 0.65),
+    0 0 28px rgba(14, 165, 233, 0.08);
+}
+
+.liquid-glass-cta {
+  background: linear-gradient(
+    135deg,
+    rgba(18, 52, 84, 0.78) 0%,
+    rgba(8, 28, 52, 0.88) 100%
+  );
+  border: 1px solid rgba(148, 236, 255, 0.34);
+  box-shadow:
+    inset 0 1px 0 rgba(226, 251, 255, 0.32),
+    0 10px 30px rgba(0, 10, 24, 0.55),
+    0 0 22px rgba(56, 189, 248, 0.14);
+}
+
+.gpu-glass {
+  backdrop-filter: blur(20px) saturate(145%);
+  -webkit-backdrop-filter: blur(20px) saturate(145%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
